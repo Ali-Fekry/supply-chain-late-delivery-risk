@@ -1,0 +1,6 @@
+{
+ "Market":["Africa","Europe","LATAM","Pacific Asia","USCA"],
+ "Shipping Mode":["First Class","Same Day","Second Class","Standard Class"],
+ "Product Name":["Adult dog supplies","Baby sweater","Bag Box Beverage Holder","Bag Boy M330 Push Cart","Bowflex SelectTech 1090 Dumbbells","Bridge stone e6 Straight Distance NFL Carolina","Brooks Women's Ghost 6 Running Shoe","Bushnell Pro X7 Jolt Slope Rangefinder","CDs of rock","Children's heaters","Dell Laptop","DVDs","First aid kit","Nike Men's Comfort 2 Slide","Nike Men's Free 5.0+ Running Shoe","Under Armour Men's Tech II T-Shirt"],
+ "scheduled_days_by_shipping_mode":{"Same Day":0,"First Class":1,"Second Class":2,"Standard Class":4}
+}
