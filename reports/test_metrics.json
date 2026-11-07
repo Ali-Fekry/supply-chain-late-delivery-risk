@@ -1,0 +1,10 @@
+{
+  "selected_model": "Tuned Decision Tree",
+  "baseline": {"accuracy": 0.5482771992, "precision": 0.5482771992, "recall": 1.0, "f1": 0.7082416501, "roc_auc": 0.5},
+  "selected_model_test": {"threshold": 0.5, "accuracy": 0.6932195879, "precision": 0.8421630955, "recall": 0.5420560748, "f1": 0.6595770838, "roc_auc": 0.7251360429},
+  "best_tuned_parameters": {"model__min_samples_leaf": 100, "model__max_depth": 10, "model__criterion": "gini", "model__class_weight": null},
+  "test_rows": 36104, "training_rows": 144415, "test_orders": 13151, "training_orders": 52601,
+  "train_test_order_overlap": 0, "target_prevalence": 0.5482913156, "decision_threshold": 0.5,
+  "features": ["Market", "Shipping Mode", "Product Name", "Days for shipment (scheduled)"],
+  "split_strategy": "StratifiedGroupKFold grouped by Order Id"
+}
