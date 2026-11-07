@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
-MODEL_PATH = ROOT / "models" / "late_delivery_pipeline.joblib"
+MODEL_PATH = ROOT / "models" / "late_delivery_pipeline.joblib.gz"
 OPTIONS_PATH = ROOT / "models" / "app_options.json"
 METADATA_PATH = ROOT / "models" / "model_metadata.json"
 
