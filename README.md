@@ -8,7 +8,7 @@ Source: [DataCo Smart Supply Chain for Big Data Analysis (Kaggle)](https://www.k
 Download `DataCoSupplyChainDataset.csv` and place it at `data/raw/DataCoSupplyChainDataset.csv`. The raw dataset is not included in this repository.
 
 ## Problem and features
-Predict `Late_delivery_risk` (1 = late risk, 0 = no late risk) from the four project-brief inputs:
+Predict `Late_delivery_risk` (1 = late risk, 0 = no late risk) from:
 - Market
 - Shipping Mode
 - Product Name
@@ -29,7 +29,7 @@ The tuned Decision Tree achieved:
 
 These results are on a grouped holdout of 36,104 item rows from 13,151 unseen orders. The majority-class baseline obtains 100% recall by flagging every row, so this model is more selective but does not improve recall over that trivial baseline. Do not describe it as a high-recall detector.
 
-Detailed reports and plots are in `reports/`.
+Detailed reports and plots are in `reports/`; the slide deck is in `presentation/`.
 
 ## Run locally
 Python 3.13 is recommended to match the saved scikit-learn artifact.
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The Streamlit app loads the included inference artifacts from `models/`. The raw CSV is only required to retrain or rerun the full notebook.
+The app loads the compressed trained pipeline from `models/late_delivery_pipeline.joblib.gz`, plus the options and metadata JSON files. The raw CSV is only required to retrain or rerun the full notebook.
 
 ## Retrain
 Install development dependencies from `requirements-dev.txt`, add the Kaggle CSV to `data/raw/`, then run:
@@ -54,7 +54,7 @@ python -m src.train
 Open `notebooks/01_supply_chain_late_delivery.ipynb` to review the analysis. A local Restart & Run All check and browser-level deployment check remain necessary.
 
 ## Deploy
-On [Streamlit Community Cloud](https://share.streamlit.io/), create an app from this repository, branch `main`, entrypoint `app.py`. Python 3.13 is specified in `.streamlit/config.toml` where supported.
+On [Streamlit Community Cloud](https://share.streamlit.io/), create an app from this repository, branch `main`, entrypoint `app.py`. Select Python 3.13 if available so the environment matches the saved artifact.
 
 ## Limitations
 This is historical decision-support research, not a delivery guarantee. The dataset's Shipping Mode and scheduled-days values are deterministically paired; the app enforces the observed mapping. Validate current operational relevance, calibration, and performance before real-world use.
