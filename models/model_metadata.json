@@ -1,0 +1,10 @@
+{
+  "selected_model": "Tuned Decision Tree",
+  "features": ["Market", "Shipping Mode", "Product Name", "Days for shipment (scheduled)"],
+  "target": "Late_delivery_risk",
+  "decision_threshold": 0.5,
+  "positive_class": "late delivery",
+  "split_strategy": "StratifiedGroupKFold grouped by Order Id",
+  "schedule_mapping": {"First Class": 1, "Same Day": 0, "Second Class": 2, "Standard Class": 4},
+  "artifact_runtime_versions": {"python": "3.13", "numpy": "2.3.5", "pandas": "2.2.3", "scikit-learn": "1.8.0", "joblib": "1.5.3"}
+}
